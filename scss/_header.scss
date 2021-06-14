@@ -1,5 +1,4 @@
 header {
-
   @include sectionPadding;
   text-align: center;
 
@@ -7,6 +6,7 @@ header {
     margin-top: 4rem;
     font-size: 2rem;
   }
+  
   p {
     margin-top: 1rem;
     margin-bottom: 3rem;
@@ -15,12 +15,26 @@ header {
   }
 
   .buttonWrapper {
+    @include breakpoint(medium) {
+      width: 70%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "ios mac";
+      gap: 2rem;
+      justify-items: center;
+      align-items: center;
+    }
+
     .buttonIOS {
       @include button(ios);
+      @include hoverEffectBtn;
     }
 
     .buttonMac {
       @include button(mac);
+      @include hoverEffectBtn;
     }
   }
 }

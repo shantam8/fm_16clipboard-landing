@@ -1,17 +1,66 @@
 section#snippets {
   @include sectionPadding;
 
-  
+  @include breakpoint(medium) {
+    padding-left: 0;
+    padding-right: 0;
+
+    & > h2,
+    & > p {
+      padding-left: 14rem;
+      padding-right: 14rem;
+    }
+  }
+
   .wrapper {
+    @include breakpoint(medium) {
+      margin-top: 3rem;
+
+      display: grid;
+      grid-template-columns: 55% 45%;
+      grid-template-rows: 1fr;
+      grid-template-areas: "image text";
+      gap: 4rem;
+      align-items: center;
+    }
+
     .img {
+      @include breakpoint(medium) {
+        grid-area: image;
+      }
+
       img {
         width: 100%;
         margin-top: 4rem;
+        
+        @include breakpoint(medium) {
+          margin-top: 0;
+        }
       }
     }
 
-    h3{
-        margin-top: 4rem;
+    .text {
+      @include breakpoint(medium) {
+        grid-area: text;
+        padding-right: 12rem;
+
+        h3 {
+          margin-top: 2rem;
+          margin-bottom: 0.5rem;
+          text-align: left;
+          font-size: 1.4rem;
+        }
+
+        p {
+          text-align: left;
+          font-size: 0.9rem;
+          line-height: 1.4rem;
+        }
+      }
+    }
+
+    h3 {
+      margin-top: 4rem;
     }
   }
 }

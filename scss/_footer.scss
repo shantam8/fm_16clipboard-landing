@@ -4,32 +4,102 @@ footer {
 
   .footerBgHelper {
     position: absolute;
-    left: -1000px;
-    width: 3000px;
-    width: 100%;
+    top: 0;
+    right: 0;
     bottom: 0;
+    left: 0;
     background-color: #f5f6f8;
     z-index: -1;
   }
   .grid {
     padding: 3rem 1rem;
 
+    @include breakpoint(small) {
+      width: 50%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(5, auto);
+      grid-template-areas:
+        "logo logo"
+        " nav1 nav4"
+        "nav2 nav5"
+        "nav3 . "
+        "socialmedia socialmedia";
+      justify-items: center;
+      align-items: center;
+
+      .nav1 {
+        grid-area: nav1;
+      }
+      .nav2 {
+        grid-area: nav2;
+      }
+      .nav3 {
+        grid-area: nav3;
+      }
+      .nav4 {
+        grid-area: nav4;
+      }
+      .nav5 {
+        grid-area: nav5;
+      }
+    }
+
+    @include breakpoint(medium) {
+      width: 80%;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "logo nav1 nav3 nav5 . socialmedia"
+        "logo nav2 nav4 . . socialmedia";
+      text-align: left;
+    }
+
     img {
       width: 3rem;
       margin-bottom: 1rem;
+
+      @include breakpoint("small") {
+        grid-area: logo;
+      }
+
+      @include breakpoint(medium) {
+        margin-bottom: 0;
+        justify-self: left;
+      }
     }
+
     p {
       margin-top: 1rem;
       color: $darkGrayishBlue;
+      @include hoverEffectText;
+
+      @include breakpoint(medium) {
+        margin-top: 0;
+        justify-self: left;
+      }
     }
 
     .socialmedia {
-      width: 60%;
+      width: 80%;
       margin: 0 auto;
       margin-top: 2.5rem;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+
+      @include breakpoint(small) {
+        grid-area: socialmedia;
+      }
+
+      @include breakpoint(medium) {
+        margin-top: 0;
+      }
+
+      svg {
+        @include hoverEffectSocialMedia;
+      }
     }
   }
 }

@@ -10,7 +10,7 @@
 @import "5clipboard";
 
 @import "footer";
-//2:20
+//5:30
 
 * {
   margin: 0;
@@ -42,23 +42,26 @@ p {
 
 body {
   position: relative;
+  overflow-x: hidden;
 
   .bgImg {
     position: absolute;
-    background-image: url("../images/bg-header-mobile.png");
-    background-size: cover;
     top: 0;
     left: 0;
     right: 0;
     height: 363px;
+
+    img{
+      width: 100%;
+      content: url("../images/bg-header-mobile.png");
+
+      @include breakpoint(small){
+        content: url("../images/bg-header-desktop.png");
+      }
+    }
   }
 
   .backgroundHelper {
-    width: 23.5rem;
     margin: 0 auto;
-
-    @include breakpoint(small){
-      width: 40rem;
-    }
   }
 }

@@ -15,18 +15,77 @@
     background-color: $lightBlue;
     box-shadow: 0 4px 0 0 darken($lightBlue, 10%);
   }
+
+  @include breakpoint(medium) {
+    grid-area: $background;
+    width: 100%;
+    margin-bottom: 0;
+  }
 }
 
-
-@mixin sectionPadding{
-  padding: 9rem 1rem 0 1rem;
+@mixin hoverEffectBtn() {
+  &:hover {
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  &:active {
+    transition: all 0s ease-in-out;
+    background-color: darkred;
+  }
 }
 
-$breakpoints:("small" : 40rem, "medium": 64rem, "large" : 90rem );
+@mixin hoverEffectText() {
+  &:hover {
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    color: $strongCyan;
+  }
 
+  &:active {
+    transition: all 0s ease-in-out;
+    color: darkred;
+  }
+}
 
-@mixin breakpoint($width){
-  @media screen and (min-width: (map-get($breakpoints, $width))){
-    @content
+@mixin hoverEffectSocialMedia() {
+  &:hover {
+    cursor: pointer;
+
+    path {
+      transition: all 0.5s ease-in-out;
+      fill: $strongCyan;
+    }
+  }
+
+  &:active {
+    path {
+      transition: all 0s ease-in-out;
+      fill: darkred;
+    }
+  }
+}
+
+@mixin sectionPadding {
+  padding: 9rem 3rem 0 3rem;
+
+  @include breakpoint(small) {
+    padding: 9rem 8rem 0 8rem;
+  }
+
+  @include breakpoint(medium) {
+    padding: 9rem 14rem 0 14rem;
+  }
+}
+
+$breakpoints: (
+  "small": 40rem,
+  "medium": 64rem,
+  "large": 90rem,
+);
+
+@mixin breakpoint($width) {
+  @media screen and (min-width: (map-get($breakpoints, $width))) {
+    @content;
   }
 }

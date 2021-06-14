@@ -1,12 +1,38 @@
-section#workflow{
-    @include sectionPadding;    text-align: center;
+section#workflow {
+  @include sectionPadding;
+  text-align: center;
 
-    .grid{
+  @include breakpoint(medium) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 
+  .grid {
+    @include breakpoint(medium) {
+      width: 80%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-row: 1fr;
+      gap: 2rem;
 
-        .img{
-            margin-top: 6rem;
-            margin-bottom: 2rem;
-        }
+      h3 {
+        font-size: 1.3rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+        line-height: 1.4rem;
+      }
     }
+
+    .img {
+      margin-top: 6rem;
+      margin-bottom: 2rem;
+
+      @include breakpoint(medium) {
+        margin-top: 3rem;
+      }
+    }
+  }
 }

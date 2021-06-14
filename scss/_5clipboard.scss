@@ -1,13 +1,35 @@
-section#clipboard{
-    @include sectionPadding;
-    padding-bottom: 7rem;
-    .buttonWrapper{
-        margin-top: 4rem;
-        .buttonIOS{
-            @include button(ios);
-        }
-        .buttonMac{
-            @include button(mac);
-        }
+section#clipboard {
+  @include sectionPadding;
+  padding-bottom: 7rem;
+
+  @include breakpoint(small) {
+    padding-bottom: 9rem;
+  }
+
+  .buttonWrapper {
+    margin-top: 4rem;
+
+    @include breakpoint(medium) {
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "ios mac";
+      gap: 2rem;
+      justify-items: center;
+      align-items: center;
     }
+
+    .buttonIOS {
+      @include button(ios);
+      @include hoverEffectBtn;
+    }
+
+    .buttonMac {
+      @include button(mac);
+      @include hoverEffectBtn;
+    }
+  }
 }

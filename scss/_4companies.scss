@@ -1,7 +1,53 @@
-section#companies{
-    @include sectionPadding;    text-align: center;
+section#companies {
+  @include sectionPadding;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
 
-    .logo{
-        margin-bottom: 4rem;
+  @include breakpoint(small) {
+    width: 60%;
+    padding-left: 0;
+    padding-right: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "google hp" "ibm microsoft" " vector vector";
+    gap: 5rem;
+    justify-items: center;
+    align-items: center;
+
+    .google {
+      grid-area: google;
     }
+    .ibm {
+      grid-area: ibm;
+    }
+    .microsoft {
+      grid-area: microsoft;
+    }
+    .hp {
+      grid-area: hp;
+    }
+    .vector {
+      grid-area: vector;
+    }
+  }
+
+  @include breakpoint(medium) {
+    width: 80%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "google ibm microsoft hp vector";
+  }
+  .logo {
+    margin-bottom: 5rem;
+
+    @include breakpoint(small) {
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
 }

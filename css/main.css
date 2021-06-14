@@ -1,7 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
 header {
-  padding: 9rem 1rem 0 1rem;
+  padding: 9rem 3rem 0 3rem;
   text-align: center;
+}
+
+@media screen and (min-width: 40rem) {
+  header {
+    padding: 9rem 8rem 0 8rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  header {
+    padding: 9rem 14rem 0 14rem;
+  }
 }
 
 header h1 {
@@ -14,6 +26,25 @@ header p {
   margin-bottom: 3rem;
   font-size: 1.1rem;
   line-height: 1.8rem;
+}
+
+@media screen and (min-width: 64rem) {
+  header .buttonWrapper {
+    width: 70%;
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "ios mac";
+    gap: 2rem;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 header .buttonWrapper .buttonIOS {
@@ -30,6 +61,27 @@ header .buttonWrapper .buttonIOS {
           box-shadow: 0 4px 0 0 #1d907f;
 }
 
+@media screen and (min-width: 64rem) {
+  header .buttonWrapper .buttonIOS {
+    grid-area: ios;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+header .buttonWrapper .buttonIOS:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+header .buttonWrapper .buttonIOS:active {
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+  background-color: darkred;
+}
+
 header .buttonWrapper .buttonMac {
   height: 54px;
   width: 90%;
@@ -44,8 +96,76 @@ header .buttonWrapper .buttonMac {
           box-shadow: 0 4px 0 0 #2e46ff;
 }
 
+@media screen and (min-width: 64rem) {
+  header .buttonWrapper .buttonMac {
+    grid-area: mac;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+header .buttonWrapper .buttonMac:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+header .buttonWrapper .buttonMac:active {
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+  background-color: darkred;
+}
+
 section#snippets {
-  padding: 9rem 1rem 0 1rem;
+  padding: 9rem 3rem 0 3rem;
+}
+
+@media screen and (min-width: 40rem) {
+  section#snippets {
+    padding: 9rem 8rem 0 8rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  section#snippets {
+    padding: 9rem 14rem 0 14rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  section#snippets {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  section#snippets > h2,
+  section#snippets > p {
+    padding-left: 14rem;
+    padding-right: 14rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  section#snippets .wrapper {
+    margin-top: 3rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 55% 45%;
+        grid-template-columns: 55% 45%;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "image text";
+    gap: 4rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  section#snippets .wrapper .img {
+    grid-area: image;
+  }
 }
 
 section#snippets .wrapper .img img {
@@ -53,12 +173,48 @@ section#snippets .wrapper .img img {
   margin-top: 4rem;
 }
 
+@media screen and (min-width: 64rem) {
+  section#snippets .wrapper .img img {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  section#snippets .wrapper .text {
+    grid-area: text;
+    padding-right: 12rem;
+  }
+  section#snippets .wrapper .text h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    font-size: 1.4rem;
+  }
+  section#snippets .wrapper .text p {
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+}
+
 section#snippets .wrapper h3 {
   margin-top: 4rem;
 }
 
 section#access {
-  padding: 9rem 1rem 0 1rem;
+  padding: 9rem 3rem 0 3rem;
+}
+
+@media screen and (min-width: 40rem) {
+  section#access {
+    padding: 9rem 8rem 0 8rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  section#access {
+    padding: 9rem 14rem 0 14rem;
+  }
 }
 
 section#access .img {
@@ -70,8 +226,48 @@ section#access .img img {
 }
 
 section#workflow {
-  padding: 9rem 1rem 0 1rem;
+  padding: 9rem 3rem 0 3rem;
   text-align: center;
+}
+
+@media screen and (min-width: 40rem) {
+  section#workflow {
+    padding: 9rem 8rem 0 8rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  section#workflow {
+    padding: 9rem 14rem 0 14rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  section#workflow {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  section#workflow .grid {
+    width: 80%;
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-row: 1;
+    grid-row: 1fr;
+    gap: 2rem;
+  }
+  section#workflow .grid h3 {
+    font-size: 1.3rem;
+  }
+  section#workflow .grid p {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+  }
 }
 
 section#workflow .grid .img {
@@ -79,22 +275,147 @@ section#workflow .grid .img {
   margin-bottom: 2rem;
 }
 
+@media screen and (min-width: 64rem) {
+  section#workflow .grid .img {
+    margin-top: 3rem;
+  }
+}
+
 section#companies {
-  padding: 9rem 1rem 0 1rem;
+  padding: 9rem 3rem 0 3rem;
+  width: 60%;
+  margin: 0 auto;
   text-align: center;
 }
 
+@media screen and (min-width: 40rem) {
+  section#companies {
+    padding: 9rem 8rem 0 8rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  section#companies {
+    padding: 9rem 14rem 0 14rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  section#companies {
+    width: 60%;
+    padding-left: 0;
+    padding-right: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "google hp" "ibm microsoft" " vector vector";
+    gap: 5rem;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section#companies .google {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: google;
+  }
+  section#companies .ibm {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: ibm;
+  }
+  section#companies .microsoft {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: microsoft;
+  }
+  section#companies .hp {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: hp;
+  }
+  section#companies .vector {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: vector;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  section#companies {
+    width: 80%;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "google ibm microsoft hp vector";
+  }
+}
+
 section#companies .logo {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
+}
+
+@media screen and (min-width: 40rem) {
+  section#companies .logo {
+    margin-bottom: 0;
+  }
+}
+
+section#companies .logo img {
+  width: 100%;
 }
 
 section#clipboard {
-  padding: 9rem 1rem 0 1rem;
+  padding: 9rem 3rem 0 3rem;
   padding-bottom: 7rem;
+}
+
+@media screen and (min-width: 40rem) {
+  section#clipboard {
+    padding: 9rem 8rem 0 8rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  section#clipboard {
+    padding: 9rem 14rem 0 14rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  section#clipboard {
+    padding-bottom: 9rem;
+  }
 }
 
 section#clipboard .buttonWrapper {
   margin-top: 4rem;
+}
+
+@media screen and (min-width: 64rem) {
+  section#clipboard .buttonWrapper {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "ios mac";
+    gap: 2rem;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 section#clipboard .buttonWrapper .buttonIOS {
@@ -111,6 +432,27 @@ section#clipboard .buttonWrapper .buttonIOS {
           box-shadow: 0 4px 0 0 #1d907f;
 }
 
+@media screen and (min-width: 64rem) {
+  section#clipboard .buttonWrapper .buttonIOS {
+    grid-area: ios;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+section#clipboard .buttonWrapper .buttonIOS:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+section#clipboard .buttonWrapper .buttonIOS:active {
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+  background-color: darkred;
+}
+
 section#clipboard .buttonWrapper .buttonMac {
   height: 54px;
   width: 90%;
@@ -125,6 +467,27 @@ section#clipboard .buttonWrapper .buttonMac {
           box-shadow: 0 4px 0 0 #2e46ff;
 }
 
+@media screen and (min-width: 64rem) {
+  section#clipboard .buttonWrapper .buttonMac {
+    grid-area: mac;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+section#clipboard .buttonWrapper .buttonMac:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+section#clipboard .buttonWrapper .buttonMac:active {
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+  background-color: darkred;
+}
+
 footer {
   position: relative;
   text-align: center;
@@ -132,10 +495,10 @@ footer {
 
 footer .footerBgHelper {
   position: absolute;
-  left: -1000px;
-  width: 3000px;
-  width: 100%;
+  top: 0;
+  right: 0;
   bottom: 0;
+  left: 0;
   background-color: #f5f6f8;
   z-index: -1;
 }
@@ -144,9 +507,78 @@ footer .grid {
   padding: 3rem 1rem;
 }
 
+@media screen and (min-width: 40rem) {
+  footer .grid {
+    width: 50%;
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: (auto)[5];
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "logo logo" " nav1 nav4" "nav2 nav5" "nav3 . " "socialmedia socialmedia";
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .grid .nav1 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: nav1;
+  }
+  footer .grid .nav2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: nav2;
+  }
+  footer .grid .nav3 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: nav3;
+  }
+  footer .grid .nav4 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: nav4;
+  }
+  footer .grid .nav5 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: nav5;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  footer .grid {
+    width: 80%;
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "logo nav1 nav3 nav5 . socialmedia" "logo nav2 nav4 . . socialmedia";
+    text-align: left;
+  }
+}
+
 footer .grid img {
   width: 3rem;
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 40rem) {
+  footer .grid img {
+    grid-area: logo;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  footer .grid img {
+    margin-bottom: 0;
+    -ms-grid-column-align: left;
+        justify-self: left;
+  }
 }
 
 footer .grid p {
@@ -154,8 +586,29 @@ footer .grid p {
   color: #4c545d;
 }
 
+footer .grid p:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  color: #26baa4;
+}
+
+footer .grid p:active {
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+  color: darkred;
+}
+
+@media screen and (min-width: 64rem) {
+  footer .grid p {
+    margin-top: 0;
+    -ms-grid-column-align: left;
+        justify-self: left;
+  }
+}
+
 footer .grid .socialmedia {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   margin-top: 2.5rem;
   display: -webkit-box;
@@ -167,6 +620,34 @@ footer .grid .socialmedia {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 40rem) {
+  footer .grid .socialmedia {
+    grid-area: socialmedia;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  footer .grid .socialmedia {
+    margin-top: 0;
+  }
+}
+
+footer .grid .socialmedia svg:hover {
+  cursor: pointer;
+}
+
+footer .grid .socialmedia svg:hover path {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  fill: #26baa4;
+}
+
+footer .grid .socialmedia svg:active path {
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+  fill: darkred;
 }
 
 * {
@@ -200,26 +681,29 @@ p {
 
 body {
   position: relative;
+  overflow-x: hidden;
 }
 
 body .bgImg {
   position: absolute;
-  background-image: url("../images/bg-header-mobile.png");
-  background-size: cover;
   top: 0;
   left: 0;
   right: 0;
   height: 363px;
 }
 
-body .backgroundHelper {
-  width: 23.5rem;
-  margin: 0 auto;
+body .bgImg img {
+  width: 100%;
+  content: url("../images/bg-header-mobile.png");
 }
 
 @media screen and (min-width: 40rem) {
-  body .backgroundHelper {
-    width: 40rem;
+  body .bgImg img {
+    content: url("../images/bg-header-desktop.png");
   }
+}
+
+body .backgroundHelper {
+  margin: 0 auto;
 }
 /*# sourceMappingURL=main.css.map */
