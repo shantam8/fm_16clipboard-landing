@@ -1,0 +1,13 @@
+section#clipboard{
+    @include sectionPadding;
+    padding-bottom: 7rem;
+    .buttonWrapper{
+        margin-top: 4rem;
+        .buttonIOS{
+            @include button(ios);
+        }
+        .buttonMac{
+            @include button(mac);
+        }
+    }
+}

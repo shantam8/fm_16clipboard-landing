@@ -1,9 +1,225 @@
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+header {
+  padding: 9rem 1rem 0 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin-top: 4rem;
+  font-size: 2rem;
+}
+
+header p {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+
+header .buttonWrapper .buttonIOS {
+  height: 54px;
+  width: 90%;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 27px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: #26baa4;
+  -webkit-box-shadow: 0 4px 0 0 #1d907f;
+          box-shadow: 0 4px 0 0 #1d907f;
+}
+
+header .buttonWrapper .buttonMac {
+  height: 54px;
+  width: 90%;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 27px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: #6173ff;
+  -webkit-box-shadow: 0 4px 0 0 #2e46ff;
+          box-shadow: 0 4px 0 0 #2e46ff;
+}
+
+section#snippets {
+  padding: 9rem 1rem 0 1rem;
+}
+
+section#snippets .wrapper .img img {
+  width: 100%;
+  margin-top: 4rem;
+}
+
+section#snippets .wrapper h3 {
+  margin-top: 4rem;
+}
+
+section#access {
+  padding: 9rem 1rem 0 1rem;
+}
+
+section#access .img {
+  margin-top: 4rem;
+}
+
+section#access .img img {
+  width: 100%;
+}
+
+section#workflow {
+  padding: 9rem 1rem 0 1rem;
+  text-align: center;
+}
+
+section#workflow .grid .img {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+
+section#companies {
+  padding: 9rem 1rem 0 1rem;
+  text-align: center;
+}
+
+section#companies .logo {
+  margin-bottom: 4rem;
+}
+
+section#clipboard {
+  padding: 9rem 1rem 0 1rem;
+  padding-bottom: 7rem;
+}
+
+section#clipboard .buttonWrapper {
+  margin-top: 4rem;
+}
+
+section#clipboard .buttonWrapper .buttonIOS {
+  height: 54px;
+  width: 90%;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 27px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: #26baa4;
+  -webkit-box-shadow: 0 4px 0 0 #1d907f;
+          box-shadow: 0 4px 0 0 #1d907f;
+}
+
+section#clipboard .buttonWrapper .buttonMac {
+  height: 54px;
+  width: 90%;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 27px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: #6173ff;
+  -webkit-box-shadow: 0 4px 0 0 #2e46ff;
+          box-shadow: 0 4px 0 0 #2e46ff;
+}
+
+footer {
+  position: relative;
+  text-align: center;
+}
+
+footer .footerBgHelper {
+  position: absolute;
+  left: -1000px;
+  width: 3000px;
+  width: 100%;
+  bottom: 0;
+  background-color: #f5f6f8;
+  z-index: -1;
+}
+
+footer .grid {
+  padding: 3rem 1rem;
+}
+
+footer .grid img {
+  width: 3rem;
+  margin-bottom: 1rem;
+}
+
+footer .grid p {
+  margin-top: 1rem;
+  color: #4c545d;
+}
+
+footer .grid .socialmedia {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Bai Jamjuree', sans-serif;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #4c545d;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  text-align: center;
+  color: #9fabb2;
+}
+
+.buttonWrapper {
+  text-align: center;
+}
+
+body {
+  position: relative;
+}
+
+body .bgImg {
+  position: absolute;
+  background-image: url("../images/bg-header-mobile.png");
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 363px;
+}
+
+body .backgroundHelper {
+  width: 23.5rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 40rem) {
+  body .backgroundHelper {
+    width: 40rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

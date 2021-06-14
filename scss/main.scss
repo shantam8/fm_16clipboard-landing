@@ -2,10 +2,63 @@
 @import "mixins";
 @import "variables";
 
+@import "header";
+@import "1snippets";
+@import "2access";
+@import "3workflow";
+@import "4companies";
+@import "5clipboard";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Bai Jamjuree', sans-serif;
+@import "footer";
+//2:20
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bai Jamjuree", sans-serif; //400, 700
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: $darkGrayishBlue;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  text-align: center;
+  color: $grayishBlue;
+}
+
+.buttonWrapper {
+  text-align: center;
+}
+
+body {
+  position: relative;
+
+  .bgImg {
+    position: absolute;
+    background-image: url("../images/bg-header-mobile.png");
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 363px;
+  }
+
+  .backgroundHelper {
+    width: 23.5rem;
+    margin: 0 auto;
+
+    @include breakpoint(small){
+      width: 40rem;
+    }
+  }
 }

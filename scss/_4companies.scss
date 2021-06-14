@@ -1,0 +1,7 @@
+section#companies{
+    @include sectionPadding;    text-align: center;
+
+    .logo{
+        margin-bottom: 4rem;
+    }
+}

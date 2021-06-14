@@ -1,0 +1,9 @@
+section#access{
+    @include sectionPadding;
+    .img{
+        margin-top: 4rem;
+        img{
+            width: 100%;
+        }
+    }
+}
